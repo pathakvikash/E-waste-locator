@@ -6,6 +6,8 @@ import Card from "../components/Card";
 import FactCard from "../components/FactCard";
 import FaqSection from "../components/FaqSection";
 import HeroHome from "../components/HeroHome";
+import Newsletter from "../components/NewsLetter";
+import Testimonials from "../components/Testimonial";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -45,6 +47,8 @@ export default function Home() {
           <FaqSection />
         </div>
       </div>
+      <Testimonials />
+      <Newsletter />
     </>
   );
 }

@@ -46,10 +46,9 @@ function Newsletter() {
             <div className="relative flex flex-col lg:flex-row justify-between items-center">
               {/* CTA content */}
               <div className="text-center lg:text-left lg:max-w-xl">
-                <h3 className="h3 text-white mb-2">Powering your business</h3>
+                <h3 className="h3 text-white mb-2">Powering your e-waste awareness.</h3>
                 <p className="text-gray-300 text-lg mb-6">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit nemo expedita voluptas
-                  culpa sapiente.
+                  Stay Informed with E-waste Locator! Get the latest insights.
                 </p>
 
                 {/* CTA form */}
@@ -61,15 +60,15 @@ function Newsletter() {
                       placeholder="Your email…"
                       aria-label="Your email…"
                     />
-                    <a className="btn text-white bg-blue-600 hover:bg-blue-700 shadow" href="#0">
+                    <a
+                      className="btn p-3 text-white bg-blue-600 hover:bg-blue-700 shadow"
+                      href="#0">
                       Subscribe
                     </a>
                   </div>
                   {/* Success message */}
                   {/* <p className="text-sm text-gray-400 mt-3">Thanks for subscribing!</p> */}
-                  <p className="text-sm text-gray-400 mt-3">
-                    7 days free trial. No credit card required.
-                  </p>
+                  <p className="text-sm text-gray-400 mt-3">to start making a difference today.</p>
                 </form>
               </div>
             </div>
