@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   number: 10,
-  string: "Hello Znjs!",
+  string: "Hello!",
   loading: false,
   error: false,
 };
