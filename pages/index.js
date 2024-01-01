@@ -9,6 +9,7 @@ import HeroHome from "../components/HeroHome";
 import Newsletter from "../components/NewsLetter";
 import Testimonials from "../components/Testimonial";
 import styles from "../styles/Home.module.css";
+import Storepage from "./storepage";
 
 export default function Home() {
   return (
@@ -17,25 +18,26 @@ export default function Home() {
       <CannotRecycleCard />
       <div className="flex">
         <div className="flex flex-col ">
-        <Card />
-        <div className="flex flex-col p-12">
-          <h2 className="text-3xl font-bold">Education</h2>
-          <hr className="my-2 w-1/2" />
-          <p>
-            Our project is an innovative E-Waste Facility Locator Website designed to bridge the gap
-            between consumers and e-waste recycling facilities. This user-friendly platform not only
-            provides the location of the nearest e-waste collection and recycling facility but also
-            educates users about the harmful components of their e-waste and their potential
-            environmental and health impacts if not disposed of correctly
-          </p>
-          <div>
-            Explore our extensive &quot;Education&quot; section to gain insights into responsible
-            e-waste disposal. We provide comprehensive resources, including articles and guides, to
-            help you understand the environmental impact of e-waste and the importance of recycling.
-          </div>
+          <Card />
+          <div className="flex flex-col p-12">
+            <h2 className="text-3xl font-bold">Education</h2>
+            <hr className="my-2 w-1/2" />
+            <p>
+              Our project is an innovative E-Waste Facility Locator Website designed to bridge the
+              gap between consumers and e-waste recycling facilities. This user-friendly platform
+              not only provides the location of the nearest e-waste collection and recycling
+              facility but also educates users about the harmful components of their e-waste and
+              their potential environmental and health impacts if not disposed of correctly
+            </p>
+            <div>
+              Explore our extensive &quot;Education&quot; section to gain insights into responsible
+              e-waste disposal. We provide comprehensive resources, including articles and guides,
+              to help you understand the environmental impact of e-waste and the importance of
+              recycling.
+            </div>
           </div>
         </div>
-          <EwasteInfoComponent />
+        <EwasteInfoComponent />
       </div>
       <div className="bg-gray-100 flex flex-col items-center justify-center min-h-screen">
         <h1 className="text-3xl font-bold p-3">Discover Nearest E-Waste Facilities India</h1>
@@ -45,10 +47,9 @@ export default function Home() {
           loading="lazy"
           className="w-full h-[500px] md:h-[600px] lg:h-[700px] xl:h-[800px] 2xl:h-[900px]"
           referrerPolicy="no-referrer-when-downgrade"></iframe>
+        <div className="flex flex-col items-center my-9 space-y-4"></div>
         <FactCard />
-        <div className="flex flex-col items-center my-9 space-y-4">
-          <FaqSection />
-        </div>
+        <FaqSection />
       </div>
       <Testimonials />
       <Newsletter />
@@ -66,23 +67,28 @@ const EwasteInfoComponent = () => {
           <strong>Lithium-containing e-waste:</strong> This includes batteries.
         </li>
         <li className="mb-4">
-          <strong>Appliances containing freon:</strong> This includes refrigerators, dehumidifiers, and air conditioners.
+          <strong>Appliances containing freon:</strong> This includes refrigerators, dehumidifiers,
+          and air conditioners.
         </li>
         <li className="mb-4">
-          <strong>Electronics containing mercury or lead:</strong> This includes LCD televisions and monitors, and old TVs (pre-1991). Old cathode ray tube televisions also contain lead.
+          <strong>Electronics containing mercury or lead:</strong> This includes LCD televisions and
+          monitors, and old TVs (pre-1991). Old cathode ray tube televisions also contain lead.
         </li>
         <li className="mb-4">
-          <strong>Damaged LCD screens:</strong> If the mercury lamp is separated from the screen, it must be disposed of properly.
+          <strong>Damaged LCD screens:</strong> If the mercury lamp is separated from the screen, it
+          must be disposed of properly.
         </li>
         <li className="mb-4">
-          <strong>Non-decontaminated medical equipment:</strong> Recycling centers often don't accept microwave ovens, even though these appliances have a ton of worthy spare parts.
+          <strong>Non-decontaminated medical equipment:</strong> Recycling centers often don &apos;t
+          accept microwave ovens, even though these appliances have a ton of worthy spare parts.
         </li>
       </ul>
 
       <p className="mt-6">
         <strong className="block mb-2">Adverse Impacts on Human Health:</strong>
-        E-waste recycling activities may have several adverse impacts on human health. Children and pregnant women are particularly vulnerable.
+        E-waste recycling activities may have several adverse impacts on human health. Children and
+        pregnant women are particularly vulnerable.
       </p>
     </div>
   );
-}
+};

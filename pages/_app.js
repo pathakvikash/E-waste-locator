@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from "react";
 import { Provider } from "react-redux";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
@@ -17,35 +17,8 @@ function MyApp({ Component, pageProps }) {
       <Header />
       <Component {...pageProps} />
       <Footer />
-      {/* <IPage/> */}
     </Provider>
   );
 }
 
 export default MyApp;
-
-const IPage = () => {
-  useEffect(() => {
-    if ('geolocation' in navigator) {
-      navigator.geolocation.getCurrentPosition(
-        (position) => {
-          const { latitude, longitude } = position.coords;
-          console.log('Latitude:', latitude);
-          console.log('Longitude:', longitude);
-          // Do something with the location data
-        },
-        (error) => {
-          console.error('Error getting location:', error.message);
-        }
-      );
-    }
-  }, []);
-
-  return (
-    <div>
-      {/* Your Next.js page content */}
-      I page !
-      {/* ... */}
-    </div>
-  );
-};

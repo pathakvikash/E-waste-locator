@@ -72,7 +72,7 @@ const HeroHome = () => {
             )}
             <div className="max-w-3xl mx-auto">
               <p className="text-xl text-gray-600 mb-8" data-aos="zoom-y-out" data-aos-delay="150">
-                Welcome to the E-Waste Facility Locator Website! Our mission is to promote responsible e-waste disposal and environmental awareness. With a stunning header, locator tool, educational pop-ups, rewards, and clear calls to action, we offer a seamless user experience. Join us in making a difference today! Visit our E-Waste Locator to find the nearest e-waste stores near you. When you recycle your items with us, you'll earn rewards for your contribution towards a greener environment!
+                Welcome to the E-Waste Facility Locator Website! Our mission is to promote responsible e-waste disposal and environmental awareness. With a stunning header, locator tool, educational pop-ups, rewards, and clear calls to action, we offer a seamless user experience. Join us in making a difference today! Visit our E-Waste Locator to find the nearest e-waste stores near you. When you recycle your items with us, you&apos;ll earn rewards for your contribution towards a greener environment!
               </p>
               <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center" data-aos="zoom-y-out" data-aos-delay="300">
                 <div>
