@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import WelcomePopup from "./POPUP/WelcomePopup";
 import { useSelector } from "react-redux";
 
@@ -43,11 +43,19 @@ let languageDemo = [
   }
 ]
 const HeroHome = () => {
-  const { location, language } = useSelector((state) => state.user);
+  let language = useSelector((state) => state.user.language);
+  let location = useSelector((state) => state.user.location);
+  const [showPopup, setShowPopup] = useState(false);
 
   useEffect(() => {
-    if (location) localStorage.setItem('location', JSON.stringify(location.name));
-    if (language) localStorage.setItem('language', JSON.stringify(language.name));
+    const storedLocation = JSON.parse(localStorage.getItem('location'));
+    const storedLanguage = JSON.parse(localStorage.getItem('language'));
+
+    if (!storedLocation && !location) {
+      setShowPopup(true);
+    } else if (!storedLanguage && !language) {
+      setShowPopup(true);
+    }
   }, [location, language]);
 
   return (
@@ -59,8 +67,9 @@ const HeroHome = () => {
               Care For Clean India E-waste & Plastic waste Management Program{" "}
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400">Locator</span>
             </h1>
-            {location == undefined ? <WelcomePopup data={countriesDemo} /> : ''}
-            {language == undefined ? <WelcomePopup data={languageDemo} /> : ''}
+            {showPopup && (
+              <WelcomePopup data={location ? languageDemo : countriesDemo} />
+            )}
             <div className="max-w-3xl mx-auto">
               <p className="text-xl text-gray-600 mb-8" data-aos="zoom-y-out" data-aos-delay="150">
                 Welcome to the E-Waste Facility Locator Website! Our mission is to promote responsible e-waste disposal and environmental awareness. With a stunning header, locator tool, educational pop-ups, rewards, and clear calls to action, we offer a seamless user experience. Join us in making a difference today! Visit our E-Waste Locator to find the nearest e-waste stores near you. When you recycle your items with us, you'll earn rewards for your contribution towards a greener environment!
